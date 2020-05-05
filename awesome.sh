@@ -10,3 +10,8 @@ settings="Section \"Device\"
 EndSection"
 
 echo $settings | sudo tee -a /etc/X11/xorg.conf.d/20-intel.conf > /dev/null
+
+# Installing Awesome Copycats by lcpz
+
+git clone --recursive https://github.com/lcpz/awesome-copycats.git
+mv -bv awesome-copycats/* ~/.config/awesome && rm -rf awesome-copycats
