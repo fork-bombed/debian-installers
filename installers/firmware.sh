@@ -12,3 +12,15 @@ deb-src http://deb.debian.org/debian buster-updates main contrib non-free" > /et
 
 sudo apt update -y && sudo apt upgrade -y
 sudo apt install -y firmware-iwlwifi nvidia-driver
+
+
+# Fix inverted scrolling
+
+echo 'Section "InputClass"
+        Identifier "libinput touchpad catchall"
+        MatchIsTouchpad "on"
+        MatchDevicePath "/dev/input/event*"
+        Driver "libinput"
+        Option "NaturalScrolling" "true"
+        Option "Tapping" "on"
+EndSection' | sudo tee -a /etc/X11/xorg.conf.d/40-libinput.conf > /dev/null
