@@ -11,7 +11,6 @@ declare -a snaps=(
 	# Daily Applications
 
 	"discord"
-	"firefox"
 	"spotify"
 	"zoom-client"
 	"htop"
