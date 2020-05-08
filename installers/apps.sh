@@ -38,9 +38,7 @@ omf install agnoster
 
 # Fix fonts for agnoster
 git clone https://github.com/abertsch/Menlo-for-Powerline.git
-cd Menlo-for-Powerline
-sudo mv *.tff /usr/share/fonts
-cd ..
+sudo mv Menlo-for-Powerline/*.tff /usr/share/fonts
 rm -rf Menlo-for-Powerline
 
 # neofetch on startup
