@@ -20,3 +20,13 @@ cat > ghidra/ghidraRun <<- EOM
 EOM
 
 sudo ln -s ~/pentesting/ghidra/ghidraRun /usr/local/bin/ghidra
+
+# Virtual Machine Manager
+sudo apt install -y virt-manager
+
+# Radare2
+git clone https://github.com/radareorg/radare2
+radare2/sys/install.sh
+
+# GDB
+sudo apt install -y gdb
